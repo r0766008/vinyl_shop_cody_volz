@@ -10,7 +10,9 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::get('/', function () {
-    return view('welcome');
+Route::view('/', 'welcome');
+Route::view('contact-us', 'contact');
+Route::prefix('admin')->group(function () {
+    Route::redirect('/', 'admin/records');
+    Route::get('records', 'Admin\RecordController@Index');
 });
