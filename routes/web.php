@@ -10,7 +10,7 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::view('/', 'welcome');
+Route::view('/', 'home');
 Route::view('contact-us', 'contact');
 Route::prefix('admin')->group(function () {
     Route::redirect('/', 'admin/records');
