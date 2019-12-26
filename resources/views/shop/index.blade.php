@@ -23,7 +23,7 @@
     <hr>
     @if ($records->count() == 0 && request()->genre_id == '%')
         <div class="alert alert-danger alert-dismissible fade show">
-            Can't find any artist or album with <b>'{{ request()->artist }}'</b>
+            Can't find any artist or album with <b>'{{ request()->artist }}'</b> for this genre
             <button type="button" class="close" data-dismiss="alert">
                 <span>&times;</span>
             </button>
