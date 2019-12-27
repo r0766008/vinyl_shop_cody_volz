@@ -2,6 +2,18 @@
 
 @section('title', 'Shop')
 
+@section('css_after')
+    <style>
+        .card {
+            cursor: pointer;
+        }
+
+        .card .btn {
+            display: none;
+        }
+    </style>
+@endsection
+
 @section('main')
     <h1>Shop</h1>
     <form method="get" action="/shop" id="searchForm">
