@@ -11696,3 +11696,7 @@ main {
   min-height: 500px;
 }
 
+.btn[disabled] {
+  cursor: not-allowed;
+}
+

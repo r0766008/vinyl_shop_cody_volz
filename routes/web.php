@@ -24,7 +24,7 @@ Route::middleware(['auth', 'admin'])->prefix('admin')->group(function () {
     Route::redirect('/', 'admin\records');
     Route::get('genres/qryGenres', 'Admin\GenreController@qryGenres');
     Route::resource('genres', 'Admin\GenreController');
-    Route::get('records', 'Admin\RecordController@Index');
+    Route::resource('records', 'Admin\RecordController');
 });
 Route::redirect('user', '/user/profile');
 Route::middleware(['auth'])->prefix('user')->group(function () {
