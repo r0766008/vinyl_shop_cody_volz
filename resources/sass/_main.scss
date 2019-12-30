@@ -5,3 +5,12 @@ main {
 .btn[disabled] {
     cursor: not-allowed;
 }
+
+
+.disabled {
+    cursor: not-allowed;
+    * {
+        pointer-events: none;
+        filter: opacity(60%);
+    }
+}

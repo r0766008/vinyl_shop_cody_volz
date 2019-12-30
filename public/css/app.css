@@ -11700,3 +11700,13 @@ main {
   cursor: not-allowed;
 }
 
+.disabled {
+  cursor: not-allowed;
+}
+
+.disabled * {
+  pointer-events: none;
+  -webkit-filter: opacity(60%);
+          filter: opacity(60%);
+}
+

@@ -21,10 +21,12 @@ Route::get('shop/{id}', 'ShopController@show');
 Route::get('contact-us', 'ContactUsController@show');
 Route::post('contact-us', 'ContactUsController@sendEmail');
 Route::middleware(['auth', 'admin'])->prefix('admin')->group(function () {
-    Route::redirect('/', 'admin\records');
+    Route::redirect('/', 'records');
     Route::get('genres/qryGenres', 'Admin\GenreController@qryGenres');
     Route::resource('genres', 'Admin\GenreController');
     Route::resource('records', 'Admin\RecordController');
+    Route::resource('users', 'Admin\UserController');
+    Route::resource('users2', 'Admin\User2Controller', ['parameters' => ['users2' => 'users']]);
 });
 Route::redirect('user', '/user/profile');
 Route::middleware(['auth'])->prefix('user')->group(function () {
